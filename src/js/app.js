@@ -30,6 +30,7 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+  //Para eliminar null y que no parezca nada miestras este vacio
   let data = ["name", "lastname", "role", "city", "country"];
   data.forEach(element => {
     if (!variables[element]) variables[element] = "";
